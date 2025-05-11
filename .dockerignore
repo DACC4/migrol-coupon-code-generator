@@ -1,0 +1,11 @@
+*.md
+.env*
+.git*
+.dockerignore
+crontab
+coupons
+Dockerfile
+docker-compose*
+.venv
+venv
+__pycache__
