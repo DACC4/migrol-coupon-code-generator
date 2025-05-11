@@ -2,7 +2,6 @@
 .env*
 .git*
 .dockerignore
-crontab
 coupons
 Dockerfile
 docker-compose*
