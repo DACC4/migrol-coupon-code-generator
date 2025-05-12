@@ -16,7 +16,10 @@ class CouponManager:
         self.directory = directory
         os.makedirs(directory, exist_ok=True)
 
-    def save(self, coupon: Dict) -> None:
+    def save(self, coupon: Dict) -> str:
+        """
+        Writes JSON and PNG, then returns the PNG path (for Telegram).
+        """
         ean = coupon["eanCode"]
         json_path = os.path.join(self.directory, f"{ean}.json")
         png_path = os.path.join(self.directory, f"{ean}.png")
@@ -28,3 +31,5 @@ class CouponManager:
         # Barcode image
         with open(png_path, "wb") as img:
             EAN13(str(ean), writer=ImageWriter()).write(img)
+
+        return png_path
