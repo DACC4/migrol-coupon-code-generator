@@ -1,2 +1,2 @@
 # min hour day month weekday command
-*/2 * * * * cd /app && uv run main.py > /dev/stdout
+0 * * * * cd /app && uv run main.py > /dev/stdout
